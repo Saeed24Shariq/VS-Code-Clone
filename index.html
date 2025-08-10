@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/vs-code-svgrepo-com.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <div class="logo-nav">
+                <img src="./assets/vs-code-svgrepo-com.svg" alt="">
+                <label for="menu" class="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </label>
+                <input type="checkbox" name="menu" id="menu">
+                <ul>
+                    <label for="file-list-items" class="list-items-lbl">
+                        <li>File</li>
+                    </label>
+                    <input type="checkbox" name="list-tems" id="file-list-items">
+                    <div class="items-list" id="file-items">
+                        <div class="list-items">
+                            <span>New File</span>
+                            <span class="shortcut">Ctrl + N</span>
+                        </div>
+                        <div class="list-items">
+                            <span>New Folder</span>
+                            <span class="shortcut">Ctrl + Shift + N</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Open File</span>
+                            <span class="shortcut">Ctrl + O</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Open Folder</span>
+                            <span class="shortcut">Ctrl + Shift + O</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Save</span>
+                            <span class="shortcut">Ctrl + S</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Save as</span>
+                            <span class="shortcut">Ctrl + Shift + S</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Exit</span>
+                        </div>
+                    </div>
+                    <label for="edit-list-items" class="list-items-lbl">
+                        <li>Edit</li>
+                    </label>
+                    <input type="checkbox" name="list-tems" id="edit-list-items">
+                    <div class="items-list" id="edit-items">
+                        <div class="list-items">
+                            <span>Cut</span>
+                            <span class="shortcut">Ctrl + X</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Copy</span>
+                            <span class="shortcut">Ctrl + C</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Paste</span>
+                            <span class="shortcut">Ctrl + V</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Undo</span>
+                            <span class="shortcut">Ctrl + Z</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Redo</span>
+                            <span class="shortcut">Ctrl + Y</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Find</span>
+                            <span class="shortcut">Ctrl + F</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Replace</span>
+                            <span class="shortcut">Ctrl + H</span>
+                        </div>
+                    </div>
+                    <label for="selection-list-items" class="list-items-lbl">
+                        <li>Selection</li>
+                    </label>
+                    <input type="checkbox" name="list-items" id="selection-list-items">
+                    <div class="items-list" id="selection-items">
+                        <div class="list-items">
+                            <span>Select All</span>
+                            <span class="shortcut">Ctrl + A</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Expand Selection</span>
+                            <span class="shortcut">Shift + Alt + RightArrow</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Shrink Selection</span>
+                            <span class="shortcut">Shift + Alt + LeftArrow</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Copy Line Up</span>
+                            <span class="shortcut">Shift + Alt + UpArrow</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Copy Line Down</span>
+                            <span class="shortcut">Shift + Alt + DownArrow</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Add Curosr Above</span>
+                            <span class="shortcut">Ctrl + Alt + DownArrow</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Add Cursor Below</span>
+                            <span class="shortcut">Ctrl + Alt + DownArrow</span>
+                        </div>
+                    </div>
+                    <label for="view-list-items" class="list-items-lbl">
+                        <li>View</li>
+                    </label>
+                    <input type="checkbox" name="list-items" id="view-list-items">
+                    <div class="items-list" id="view-items">
+                        <div class="list-items">
+                            <span>Command Palete...</span>
+                            <span class="shortcut">Ctrl + Shift + P</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Open View...</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Appearence</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Editor Layout</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Explorer</span>
+                            <span class="shortcut">Ctrl + Shift + E</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Search</span>
+                            <span class="shortcut">Ctrl + Shift + F</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Source Control</span>
+                            <span class="shortcut">Ctrl + Shift + G</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Run</span>
+                            <span class="shortcut">Ctrl + Shift + D</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Extensions</span>
+                            <span class="shortcut">Ctrl + Shift + X</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Word Wrap</span>
+                            <span class="shortcut">Alt + Z</span>
+                        </div>
+                    </div>
+                    <label for="go-list-items" class="list-items-lbl">
+                        <li>Go</li>
+                    </label>
+                    <input type="checkbox" name="list-items" id="go-list-items">
+                    <div class="items-list" id="go-items">
+                        <div class="list-items">
+                            <span>Back</span>
+                            <span class="shortcut">Alt + LeftArrow</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Farward</span>
+                            <span class="shortcut">Alt + RightArrow</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Last Edited Location</span>
+                            <span class="shortcut">Ctrl + K Ctrl + Q</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Switch Editor</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Switch Group</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Next Problem</span>
+                            <span class="shortcut">F8</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Previous Problem</span>
+                            <span class="shortcut">Shift + F8</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Next Change</span>
+                            <span class="shortcut">Alt + F3</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Previous Change</span>
+                            <span class="shortcut">Shift + Alt + F3</span>
+                        </div>
+                    </div>
+                    <label for="run-list-items" class="list-items-lbl">
+                        <li>Run</li>
+                    </label>
+                    <input type="checkbox" name="list-items" id="run-list-items">
+                    <div class="items-list" id="run-items">
+                        <div class="list-items">
+                            <span>Start Debugging</span>
+                            <span class="shortcut">F5</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Run Without Debugging</span>
+                            <span class="shortcut">Ctrl + F5</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Stop Debugging</span>
+                            <span class="shortcut">Shift + F5</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Restart Debugging</span>
+                            <span class="shortcut">Ctrl + Shift + F5</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Open Configurations</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Add Configuration...</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Step Over</span>
+                            <span class="shortcut">F10</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Step Into</span>
+                            <span class="shortcut">F11</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Step Out</span>
+                            <span class="shortcut">Shift + F11</span>
+                        </div>
+                        <div class="list-items">
+                            <span>Continue</span>
+                            <span class="shortcut">F5</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Install Additional Debuggers...</span>
+                        </div>
+                    </div>
+                    <label for="more-list-items" class="list-items-lbl">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </li>
+                    </label>
+                    <input type="checkbox" name="list-items" id="more-list-items">
+                    <div class="items-list" id="more-items">
+                        <div class="list-items">
+                            <span>Terminal</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                        <hr>
+                        <div class="list-items">
+                            <span>Help</span>
+                            <span class="shortcut">&gt;</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="arrows-con">
+                    <div class="arrows">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z" />
+                        </svg>
+                    </div>
+                    <div class="arrows">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="🔍︎File Name">
+                </div>
+                <div class="copilot-con">
+                    <img src="./assets/Copilot.svg" alt="Copilot">
+                </div>
+            </div>
+            <div class="right">
+                <div class="docking-con">
+                    <div class="docking">
+                        <img src="./assets/dock-bottom-svgrepo-com.svg" alt="Dock Bottom">
+                    </div>
+                    <div class="docking">
+                        <img src="./assets/dock-left-svgrepo-com.svg" alt="Dock Bottom">
+                    </div>
+                    <div class="docking">
+                        <img src="./assets/dock-right-svgrepo-com.svg" alt="Dock Bottom">
+                    </div>
+                    <div class="docking">
+                        <img src="./assets/dock-top-svgrepo-com.svg" alt="Dock Bottom">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="icon-left-con">
+                <div class="icon-left">
+                    <label class="left-icon" for="chk">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M760-200H320q-33 0-56.5-23.5T240-280v-560q0-33 23.5-56.5T320-920h280l240 240v400q0 33-23.5 56.5T760-200ZM560-640v-200H320v560h440v-360H560ZM160-40q-33 0-56.5-23.5T80-120v-560h80v560h440v80H160Zm160-800v200-200 560-560Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="chk" id="chk" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Explorer</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <div class="file">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960"
+                                        width="18px" fill="#FFA500">
+                                        <path
+                                            d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z" />
+                                    </svg>
+                                </div>
+                                <deiv class="text"><span>index.html</span></deiv>
+                            </div>
+                            <div class="file">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960"
+                                        width="18px" fill="#0078D4">
+                                        <path
+                                            d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z" />
+                                    </svg>
+                                </div>
+                                <deiv class="text"><span>style.css</span></deiv>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-left search">
+                    <label for="search-inp" class="left-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="chk" id="search-inp" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Search</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <div class="search-box">
+                                <input type="text" name="search" id="search" placeholder="Search">
+                                <div class="search-items">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="5px" viewBox="0 -960 960 960"
+                                        width="15px" fill="#e3e3e3">
+                                        <path
+                                            d="M680-360q-17 0-28.5-11.5T640-400v-160q0-17 11.5-28.5T680-600h120q17 0 28.5 11.5T840-560v40h-60v-20h-80v120h80v-20h60v40q0 17-11.5 28.5T800-360H680Zm-300 0v-240h160q17 0 28.5 11.5T580-560v40q0 17-11.5 28.5T540-480q17 0 28.5 11.5T580-440v40q0 17-11.5 28.5T540-360H380Zm60-150h80v-30h-80v30Zm0 90h80v-30h-80v30Zm-320 60v-200q0-17 11.5-28.5T160-600h120q17 0 28.5 11.5T320-560v200h-60v-60h-80v60h-60Zm60-120h80v-60h-80v60Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960"
+                                        width="15px" fill="#e3e3e3">
+                                        <path
+                                            d="M256-240h84l44-122h192l44 122h84L522-720h-84L256-240Zm152-192 70-198h4l70 198H408ZM160-80q-33 0-56.5-23.5T80-160v-640q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v640q0 33-23.5 56.5T800-80H160Zm0-80h640v-640H160v640Zm0-640v640-640Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960"
+                                        width="15px" fill="#e3e3e3">
+                                        <path
+                                            d="M120-160v-640h80v640h-80Zm640 0v-640h80v640h-80ZM294-280l150-400h72l150 400h-70l-34-102H400l-36 102h-70Zm126-160h120l-58-166-62 166Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="search-box replace-box">
+                                <input type="text" name="search" id="search" placeholder="Replace">
+                                <div class="search-items">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960"
+                                        width="15px" fill="#e3e3e3">
+                                        <path
+                                            d="M256-240h84l44-122h192l44 122h84L522-720h-84L256-240Zm152-192 70-198h4l70 198H408ZM160-80q-33 0-56.5-23.5T80-160v-640q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v640q0 33-23.5 56.5T800-80H160Zm0-80h640v-640H160v640Zm0-640v640-640Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-left">
+                    <label for="source-chk" class="left-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="5px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M480-80q-50 0-85-35t-35-85q0-5 .5-11t1.5-11l-83-47q-16 14-36 21.5t-43 7.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 9t38 25l119-60q-3-23 2.5-45t19.5-41l-34-52q-7 2-14.5 3t-15.5 1q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 20-6.5 38.5T456-688l35 52q8-2 15-3t15-1q17 0 32 4t29 12l66-54q-4-10-6-20.5t-2-21.5q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-17 0-32-4.5T699-617l-66 55q4 10 6 20.5t2 21.5q0 50-35 85t-85 35q-24 0-45.5-9T437-434l-118 59q2 9 1.5 18t-2.5 18l84 48q16-14 35.5-21.5T480-320q50 0 85 35t35 85q0 50-35 85t-85 35ZM200-320q17 0 28.5-11.5T240-360q0-17-11.5-28.5T200-400q-17 0-28.5 11.5T160-360q0 17 11.5 28.5T200-320Zm160-400q17 0 28.5-11.5T400-760q0-17-11.5-28.5T360-800q-17 0-28.5 11.5T320-760q0 17 11.5 28.5T360-720Zm120 560q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Zm40-320q17 0 28.5-11.5T560-520q0-17-11.5-28.5T520-560q-17 0-28.5 11.5T480-520q0 17 11.5 28.5T520-480Zm240-200q17 0 28.5-11.5T800-720q0-17-11.5-28.5T760-760q-17 0-28.5 11.5T720-720q0 17 11.5 28.5T760-680Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="source-chk" id="source-chk" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Source</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aut officiis
+                                aliquid repellat delectus eum nostrum deserunt iste temporibus quod?</span>
+                            <div class="button">
+                                <button>Open Repository</button>
+                            </div>
+                            <span>Use this: </span><br>
+                            <a href="git.openRepositoryInParentFolders">git.openRepositoryInParentFolders</a><br>
+                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id sed repellat dicta rerum!
+                                Expedita cupiditate ipsum nihil nostrum totam dicta.</span><br>
+                            <span>To learn more </span>
+                            <a href="#">read our docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-left">
+                    <label for="debug-chk" class="left-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M480-200q66 0 113-47t47-113v-160q0-66-47-113t-113-47q-66 0-113 47t-47 113v160q0 66 47 113t113 47Zm-80-120h160v-80H400v80Zm0-160h160v-80H400v80Zm80 40Zm0 320q-65 0-120.5-32T272-240H160v-80h84q-3-20-3.5-40t-.5-40h-80v-80h80q0-20 .5-40t3.5-40h-84v-80h112q14-23 31.5-43t40.5-35l-64-66 56-56 86 86q28-9 57-9t57 9l88-86 56 56-66 66q23 15 41.5 34.5T688-640h112v80h-84q3 20 3.5 40t.5 40h80v80h-80q0 20-.5 40t-3.5 40h84v80H688q-32 56-87.5 88T480-120Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="debug-chk" id="debug-chk" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Debug</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <div class="button">
+                                <button>Run and Debug</button>
+                            </div>
+                            <span>To customize Run and Debug </span>
+                            <a href="#">create a launch.json file</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-left">
+                    <label for="extensions-chk" class="left-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="extensions-chk" id="extensions-chk" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Extensions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <div class="search-box replace-box">
+                                <input type="text" name="search" id="search" placeholder="Search Extensions in Market">
+                                <div class="search-items">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M120-280v-80h560v80H120Zm80-160v-80h560v80H200Zm80-160v-80h560v80H280Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="extensions">
+                                <div class="icon">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title>file_type_astro</title>
+                                            <path
+                                                d="M5.9,18.847a7.507,7.507,0,0,0-.572,2.624,3.265,3.265,0,0,0,.551,1.553,7.427,7.427,0,0,0,2.093,1.681L13.1,28.119A7.332,7.332,0,0,0,15.2,29.287a3.239,3.239,0,0,0,1.5,0,7.381,7.381,0,0,0,2.117-1.16L24,24.711a7.512,7.512,0,0,0,2.117-1.688,3.241,3.241,0,0,0,.55-1.563,7.515,7.515,0,0,0-.587-2.643L21.547,4.551a3.973,3.973,0,0,0-.54-1.3,1.733,1.733,0,0,0-.7-.51,3.972,3.972,0,0,0-1.4-.122H13.005a3.932,3.932,0,0,0-1.4.125,1.713,1.713,0,0,0-.7.512,3.94,3.94,0,0,0-.535,1.3L5.9,18.848Zm13.24-13.2a3.329,3.329,0,0,1,.441,1.093l3.892,12.784a16.168,16.168,0,0,0-4.653-1.573L16.291,9.391a.331.331,0,0,0-.513-.169.323.323,0,0,0-.119.169l-2.5,8.557a16.14,16.14,0,0,0-4.674,1.579L12.393,6.743a3.281,3.281,0,0,1,.442-1.094,1.458,1.458,0,0,1,.582-.43,3.31,3.31,0,0,1,1.175-.1h2.793a3.314,3.314,0,0,1,1.176.1,1.454,1.454,0,0,1,.583.432ZM16.127,21.06a5.551,5.551,0,0,0,3.4-.923,2.8,2.8,0,0,1-.207,2.182A3.938,3.938,0,0,1,17.773,23.8c-.674.428-1.254.8-1.254,1.787a2.079,2.079,0,0,0,.209.914,2.49,2.49,0,0,1-1.535-2.3v-.061c0-.683,0-1.524-.962-1.524a1.028,1.028,0,0,0-.391.077,1.021,1.021,0,0,0-.552.551,1.03,1.03,0,0,0-.079.391,3.769,3.769,0,0,1-.988-2.644,4.206,4.206,0,0,1,.175-1.248c.4.757,1.92,1.32,3.731,1.32Z"
+                                                style="fill:#ff5d01;fill-rule:evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <span class="head">Astro</span>
+                                    <span class="description">Language support for Astro</span>
+                                    <div class="verification">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960"
+                                            width="14px" fill="#e3e3e3">
+                                            <path
+                                                d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm-42 142 226-226-56-58-170 170-86-84-56 56 142 142Z" />
+                                        </svg>
+                                        <span>Astro</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extensions">
+                                <div class="icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path>
+                                            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path>
+                                            <path
+                                                d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+                                                fill="white"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <span class="head">HTML</span>
+                                    <span class="description">HTML 5 snippets support</span>
+                                    <div class="verification">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            height="15px" width="15px">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.5924 3.20027C9.34888 3.4078 9.22711 3.51158 9.09706 3.59874C8.79896 3.79854 8.46417 3.93721 8.1121 4.00672C7.95851 4.03705 7.79903 4.04977 7.48008 4.07522C6.6787 4.13918 6.278 4.17115 5.94371 4.28923C5.17051 4.56233 4.56233 5.17051 4.28923 5.94371C4.17115 6.278 4.13918 6.6787 4.07522 7.48008C4.04977 7.79903 4.03705 7.95851 4.00672 8.1121C3.93721 8.46417 3.79854 8.79896 3.59874 9.09706C3.51158 9.22711 3.40781 9.34887 3.20027 9.5924C2.67883 10.2043 2.4181 10.5102 2.26522 10.8301C1.91159 11.57 1.91159 12.43 2.26522 13.1699C2.41811 13.4898 2.67883 13.7957 3.20027 14.4076C3.40778 14.6511 3.51158 14.7729 3.59874 14.9029C3.79854 15.201 3.93721 15.5358 4.00672 15.8879C4.03705 16.0415 4.04977 16.201 4.07522 16.5199C4.13918 17.3213 4.17115 17.722 4.28923 18.0563C4.56233 18.8295 5.17051 19.4377 5.94371 19.7108C6.278 19.8288 6.6787 19.8608 7.48008 19.9248C7.79903 19.9502 7.95851 19.963 8.1121 19.9933C8.46417 20.0628 8.79896 20.2015 9.09706 20.4013C9.22711 20.4884 9.34887 20.5922 9.5924 20.7997C10.2043 21.3212 10.5102 21.5819 10.8301 21.7348C11.57 22.0884 12.43 22.0884 13.1699 21.7348C13.4898 21.5819 13.7957 21.3212 14.4076 20.7997C14.6511 20.5922 14.7729 20.4884 14.9029 20.4013C15.201 20.2015 15.5358 20.0628 15.8879 19.9933C16.0415 19.963 16.201 19.9502 16.5199 19.9248C17.3213 19.8608 17.722 19.8288 18.0563 19.7108C18.8295 19.4377 19.4377 18.8295 19.7108 18.0563C19.8288 17.722 19.8608 17.3213 19.9248 16.5199C19.9502 16.201 19.963 16.0415 19.9933 15.8879C20.0628 15.5358 20.2015 15.201 20.4013 14.9029C20.4884 14.7729 20.5922 14.6511 20.7997 14.4076C21.3212 13.7957 21.5819 13.4898 21.7348 13.1699C22.0884 12.43 22.0884 11.57 21.7348 10.8301C21.5819 10.5102 21.3212 10.2043 20.7997 9.5924C20.5922 9.34887 20.4884 9.22711 20.4013 9.09706C20.2015 8.79896 20.0628 8.46417 19.9933 8.1121C19.963 7.95851 19.9502 7.79903 19.9248 7.48008C19.8608 6.6787 19.8288 6.278 19.7108 5.94371C19.4377 5.17051 18.8295 4.56233 18.0563 4.28923C17.722 4.17115 17.3213 4.13918 16.5199 4.07522C16.201 4.04977 16.0415 4.03705 15.8879 4.00672C15.5358 3.93721 15.201 3.79854 14.9029 3.59874C14.7729 3.51158 14.6511 3.40781 14.4076 3.20027C13.7957 2.67883 13.4898 2.41811 13.1699 2.26522C12.43 1.91159 11.57 1.91159 10.8301 2.26522C10.5102 2.4181 10.2043 2.67883 9.5924 3.20027ZM16.3735 9.86314C16.6913 9.5453 16.6913 9.03 16.3735 8.71216C16.0557 8.39433 15.5403 8.39433 15.2225 8.71216L10.3723 13.5624L8.77746 11.9676C8.45963 11.6498 7.94432 11.6498 7.62649 11.9676C7.30866 12.2854 7.30866 12.8007 7.62649 13.1186L9.79678 15.2889C10.1146 15.6067 10.6299 15.6067 10.9478 15.2889L16.3735 9.86314Z"
+                                                    fill="#0f3bcc"></path>
+                                            </g>
+                                        </svg>
+                                        <span>Microsoft</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-left">
+                    <label for="git-actions" class="left-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M760-120q-39 0-70-22.5T647-200H440q-66 0-113-47t-47-113q0-66 47-113t113-47h80q33 0 56.5-23.5T600-600q0-33-23.5-56.5T520-680H313q-13 35-43.5 57.5T200-600q-50 0-85-35t-35-85q0-50 35-85t85-35q39 0 69.5 22.5T313-760h207q66 0 113 47t47 113q0 66-47 113t-113 47h-80q-33 0-56.5 23.5T360-360q0 33 23.5 56.5T440-280h207q13-35 43.5-57.5T760-360q50 0 85 35t35 85q0 50-35 85t-85 35ZM200-680q17 0 28.5-11.5T240-720q0-17-11.5-28.5T200-760q-17 0-28.5 11.5T160-720q0 17 11.5 28.5T200-680Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="git-actions" id="git-actions" class="chk">
+                    <div class="side-bar">
+                        <div class="top">
+                            <span>Github Actions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </div>
+                        <div class="bottom">
+                            <span>Sign in to GitHub to display runs, workflows, and configure Actions settings.</span>
+                            <div class="button">
+                                <button>Sign in to GitHub</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-con">
+                <div class="account-img">
+                    <label for="account-list-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="account-list-items" id="account-list-items">
+                    <div class="account-list-items">
+                        <div class="account-items-list">
+                            <span>Saeed24Shariq (GitHub)</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Backup and Sync Settings...</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Turn on Cloud Changes</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Manage Language Model Access</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Turn On Remote Tunnel Access</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting">
+                    <label for="setting-list-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#575656">
+                            <path
+                                d="M480-480ZM370-80l-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-74 56q-22-11-45-18.5T714-558l63-48-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q17 17 36.5 30.5T400-275q1 57 23.5 107T484-80H370Zm41-279q6-20 14.5-38.5T445-433q-11-8-17-20.5t-6-26.5q0-25 17.5-42.5T482-540q14 0 27 6.5t21 17.5q17-11 35-19.5t38-13.5q-18-32-50-51.5T482-620q-59 0-99.5 41T342-480q0 38 18.5 70.5T411-359Zm269 199 120-120-120-120-28 28 72 72H560v40h163l-71 72 28 28Zm0 80q-83 0-141.5-58.5T480-280q0-83 58.5-141.5T680-480q83 0 141.5 58.5T880-280q0 83-58.5 141.5T680-80Z" />
+                        </svg>
+                    </label>
+                    <input type="checkbox" name="account-list-items" id="setting-list-items">
+                    <div class="setting-list-items">
+                        <div class="account-items-list">
+                            <span>Control Palate...</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Profiles</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Settings</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Backup and Sync Settings</span>
+                        </div>
+                        <div class="account-items-list">
+                            <span>Restart to Update</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="tab-con">
+                    <div class="img-con">
+                        <img src="./assets/code_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="VS code">
+                    </div>
+                    <div class="welcome-text">
+                        <span>Welcome</span>
+                    </div>
+                </div>
+                <div class="end-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm280-80h280v-560H480v560Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e3e3e3">
+                        <path
+                            d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                    </svg>
+                </div>
+            </div>
+            <textarea name="text-point" id="text-point" placeholder=""></textarea>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <div class="left">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M480-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-280q0-33-23.5-56.5T480-360q-33 0-56.5 23.5T400-280q0 33 23.5 56.5T480-200ZM122-616l-59-55q81-79 188-124t229-45q122 0 229 45t188 124l-59 55q-71-67-162-105.5T480-760q-105 0-196 38.5T122-616Zm570 137q-42-38-96-59.5T480-560q-62 0-115.5 21.5T268-479l-59-55q54-50 123.5-78T480-640q78 0 147 28t123 78l-58 55ZM480-280Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-100Z" />
+                </svg>
+            </div>
+            <div class="right">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M160-120v-200q0-33 23.5-56.5T240-400h480q33 0 56.5 23.5T800-320v200H160Zm200-320q-83 0-141.5-58.5T160-640q0-83 58.5-141.5T360-840h240q83 0 141.5 58.5T800-640q0 83-58.5 141.5T600-440H360ZM240-200h480v-120H240v120Zm120-320h240q50 0 85-35t35-85q0-50-35-85t-85-35H360q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0-80q17 0 28.5-11.5T400-640q0-17-11.5-28.5T360-680q-17 0-28.5 11.5T320-640q0 17 11.5 28.5T360-600Zm240 0q17 0 28.5-11.5T640-640q0-17-11.5-28.5T600-680q-17 0-28.5 11.5T560-640q0 17 11.5 28.5T600-600ZM480-200Zm0-440Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q54 0 104-17.5t92-50.5L228-676q-33 42-50.5 92T160-480q0 134 93 227t227 93Zm252-124q33-42 50.5-92T800-480q0-134-93-227t-227-93q-54 0-104 17.5T284-732l448 448Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+                </svg>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
